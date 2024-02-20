@@ -13,9 +13,39 @@
     color: var(--main-color);
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.booki {
+    height: 19px;
+    padding: 30px 50px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 51px;
+    width: 244px;
+}
+
+nav a{
+    padding: 16px 0px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-title:hover{
+    border-top: 2px solid blue;
+ /*   border-bottom: 2px solid blue; for mobile */
+    color: blue;
+}
+
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .main-container {
