@@ -10,7 +10,7 @@
     --filter-btn-color: #D9D9D9;
 }
 
-.fa-solid {
+.fas {
     color: var(--main-color);
 }
 
@@ -18,7 +18,7 @@
 body {
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 0px;
 }
 
 .main-container {
@@ -40,6 +40,8 @@ a {
 header {
     display: flex;
     justify-content: space-between;
+    height: 79px;
+    margin-bottom: 30px;
 }
 
 .booki {
@@ -66,7 +68,6 @@ nav a{
     color: var(--main-color);
 }
 
-
 .headline{
     height: 53px;
 }
@@ -75,6 +76,7 @@ nav a{
     margin: 0;
     font-size: 22px;
     font-weight:700;
+    height:26px;
 }
 
 .link-footer {
@@ -95,7 +97,7 @@ nav a{
     align-items: center;
 
     width: 50px;
-    border: 1px var(--main-bg-color);
+    border: 1px solid var(--main-bg-color);
     border-radius: 15px 0px 0px 15px;
     background-color: var(--main-bg-color);
 }
@@ -109,14 +111,15 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid var(--main-bg-color);
 }
 
 #city-search-id {
-    border: 1px var(--main-bg-color);
     text-align: center;
     font-size: 18px;
-    font-weight:700;
+    font-weight: 700;
     width: 195px;
+    border: 0px; /*default black border is removed */
  }
 
 #city-search-id::placeholder {
