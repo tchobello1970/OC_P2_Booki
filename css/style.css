@@ -22,12 +22,12 @@
 .color-black {
     color:black;
 }
-/*
+
 body {
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*margin: 0;
-}*/
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
 
 .main-container {
     width: 100%;
@@ -229,19 +229,6 @@ nav a{
     align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .card {
     background-color: white;
     border-radius: 20px;
@@ -249,8 +236,6 @@ nav a{
     box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.1);
     /*filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));*/
 }
-
-
 
 .card img {
     object-fit: cover;                                                                                                                                                        
@@ -283,7 +268,6 @@ nav a{
     margin-bottom: 35px; 
 }
 
-
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 15px;
@@ -304,20 +288,15 @@ nav a{
     flex-wrap: wrap;
     gap: 30px;
     width: 100%;
+    box-sizing: border-box;
 }
-
-/*.hebergements-cards a {
-    width: 29.5%;
-}*/ 
 
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    width: 240px;
-    /*width: 100%; fills the parent a not working*/
+    width: 29%;
     height: 192.25px;
-    gap: 4px;
-    padding-bottom: 10px;
+     padding-bottom: 10px;
 }
 
 .hebergements-cards img {
@@ -394,15 +373,18 @@ nav a{
     margin: 0;
 }
 
-.activities-all {
+.activities {
     width: 100%;
-    margin-bottom: 35px; 
+    margin-bottom: 35px;
+    padding: 30px;
+    box-sizing: border-box;   
 }
 
 .activities-cards {
     display: flex;
     gap: 30px;
     width: 100%;
+    margin-top: 30px;
 }
 
 .activity-card {
@@ -411,25 +393,23 @@ nav a{
     box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    width: 312px;
-    height: 439px;
+    width: 23%;
+    /*height: 439px;*/
 }
-
 
 .activity-card img {
     height: 380px;
+    width: 100%;
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px;                                                                                                                                                       
-}
-
-
+    border-top-right-radius: 20px; 
+    object-fit: cover;                                                                                                                                                    
+}                                                                                                                                                     
 
 .activities-text {
     padding: 20px 19px;
     margin: 0;
     font-size: 16px;
     font-weight: 700;
-
 }
 
 footer {
