@@ -20,8 +20,8 @@
         <header>
             <img class="booki" src="./images/logo/Booki.png" alt="Logo Booki">
             <nav>
-                <a href="#" class="nav-title">Hébergements</a>
-                <a href="#" class="nav-title">Activités</a>
+                <a href="#hebergements-id" class="nav-title">Hébergements</a>
+                <a href="#activities-id" class="nav-title">Activités</a>
             </nav>
         </header>
         <main>
@@ -35,7 +35,7 @@
                         <i class="resize-18 color-black fa-solid fa-location-dot" aria-hidden="true"></i>
                     </div>
                     <div class="container-form">
-                        <form method="get">
+                        <form method="get" action="">
                             <input type="search" id="city-search-id" name="city" placeholder="Marseille, France">
                         </form>
                     </div>
@@ -67,7 +67,7 @@
                 </div>
             </section>
             <div class="hebergements-and-populaires">
-                <section class="hebergements">
+                <section id="hebergements-id" class="hebergements">
                     <h1>Hébergements à Marseille</h1>
                     <div class="hebergements-cards">
                         <article class="card">
@@ -242,7 +242,7 @@
                     </div>
                 </section>
             </div>         
-            <section class="activities">
+            <section id="activities-id" class="activities">
                 <h1>Activités à Marseille</h1>
                 <div class="activities-cards">                   
                     <article class="activity-card">
@@ -286,9 +286,8 @@
             </div>
             <div class="footer-container">
                 <div class="hebergements-footer">Assistance</div>
-                <a href="#">Fonctionnement du site</a>
-                <a href="#">Conditions générales</a>
-                <a href="#">Données et confidenttialités</a>
+                <a href="#">Centre d'aide</a>
+                <a href="#">Nous contacter</a>
             </div>               
         </footer>
     </div>

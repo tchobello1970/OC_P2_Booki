@@ -36,13 +36,17 @@ body {
     box-sizing: border-box; /* borders and paddings are included */   
 }
 
+main {
+    width: 100%;
+}
+
 
 h1 {
     font-size: 22px;
     font-weight: 700;
  }
 
- h5 {
+h5 {
     font-size: 16px;
     font-weight: 400;  
  }
@@ -175,7 +179,7 @@ nav a{
     border: 1px var(--main-color);
     border-radius: 15px;
     background-color: var(--main-color);
-    /* display:none; all but mobile users */
+    display:none; /* only for mobile users */
 }
 
 .filters {
@@ -286,7 +290,8 @@ nav a{
 .hebergements-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: space-between;
+    row-gap: 30px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -296,7 +301,6 @@ nav a{
     flex-direction: column;
     width: 29%;
     height: 192.25px;
-     padding-bottom: 10px;
 }
 
 .hebergements-cards img {
@@ -312,8 +316,7 @@ nav a{
     flex-direction: column;
     justify-content: space-between;
     padding: 0px 15px;
-    gap: 8px;
-  /*   box-sizing: border-box;*/
+    height: 70px;
 }
 
 .hebergements-cards .card-title {
@@ -430,6 +433,13 @@ footer {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
+
+@media (max-width: 1050px) and (min-width: 1025px){
+    .hebergements-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+   }
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
@@ -437,6 +447,7 @@ footer {
 
     .hebergements {
         width: 100%;
+        gap:30px;
     }
 
     .populaires {
@@ -461,9 +472,41 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activity-card img{
+        height: 200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    .main-container {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box; /* borders and paddings are included */   
+    }
+
+
+    .hebergements-and-populaires {
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        
+    }
+
+
+    footer {
+        /*display: flex;*/
+        width: 100%;
+       /* flex-direction: column;*/
+        background-color: var(--main-bg-color);
+        margin-top: 35px;
+    }
+
+    .footer-container{
+        width: 100%;    
+        padding: 20px 0px;
+
+    }
+
 }
