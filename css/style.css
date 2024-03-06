@@ -37,20 +37,23 @@ body {
 
 main {
     width: 100%;
-
 }
-
 
 h1 {
     font-size: 22px;
     font-weight: 700;
- }
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
 
  h4 {
     font-size: 16px;
     font-weight: 700;  
     margin-block-start: 0px;
- }
+}
 
 h5 {
     font-size: 16px;
@@ -90,7 +93,6 @@ nav a{
 
 .nav-title:hover {
     border-top: 2px solid var(--main-color);
- /*   border-bottom: 2px solidvar(--main-color); for mobile */
     color: var(--main-color);
 }
 
@@ -104,17 +106,19 @@ nav a{
 }
 
 .headline {
-    height: 53px;
-}
-
-.section-title {
-    padding-bottom: 8px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
 }
 
 .search-bar {
     display: flex;
     height: 49px;
+    width: 375px;
     margin: 0;
+    
+    border-radius: 15px;
 }
 
 .search-left {
@@ -122,9 +126,8 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 50px;
     border: 1px solid var(--main-bg-color);
+    width: 50px;
     border-radius: 15px 0px 0px 15px;
     background-color: var(--main-bg-color);
 }
@@ -138,7 +141,8 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--main-bg-color);
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
 }
 
 #city-search-id {
@@ -160,11 +164,12 @@ nav a{
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+
  /* button */
     cursor: pointer;
     width: 132px;
     margin: 0; 
-    border: 1px var(--main-color);
+    border: 1px solid var(--main-color);
     border-radius: 0px 15px 15px 0px;
     background-color: var(--main-color);
 /* text */
@@ -179,22 +184,30 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
+    /*border: 1px solid var(--main-bg-color);*/
+    border-radius: 0px 15px 15px 0px;
  /* button */   
     cursor: pointer;
     width: 49px;
     border: 1px var(--main-color);
     border-radius: 15px;
     background-color: var(--main-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display:none; /* only for mobile users */
 }
 
 .filters {
     display: flex;
     align-items: center;
-    /*flex-wrap: wrap;*/
-    height: 50px;
-    gap: 10px;
+    gap: 15px;
 }
+
+.filter-buttons{
+    display: flex;
+    align-items: center;
+    gap: 15px;  
+}
+
 
 .button-filter {
   /* button */
@@ -442,7 +455,13 @@ footer {
     }
 
    }
-@media screen and (min-width: 768.px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .filters {
+        flex-direction: column;
+        align-items: normal;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -485,7 +504,7 @@ footer {
 }
 
 /* Small devices (phones, less than 768px) */
-@media screen and (max-width: 767.98px) {
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
 
     .body-container {
         width: 100%;
@@ -493,9 +512,79 @@ footer {
         box-sizing: border-box; /* borders and paddings are included */   
     }
 
+
+
     header{
-        margin-bottom: 35px; /* 35px instead of 30px for mobile */
+        flex-direction: column;
+        height: 115px;
+        align-items: center;
+       /* margin-bottom: 35px; /* 35px instead of 30px for mobile */
     }
+  
+    .booki {
+        padding: 30px 50px;
+    }  
+
+    nav {
+        width: 100%;
+    }
+    
+    nav a{
+        width: 50%;
+        padding: 0px;
+        border-top: 0px solid transparent;
+        text-align: center;
+    }
+    
+    .nav-title:hover {
+        border-bottom: 2px solid var(--main-color);
+        border-top: 0px solid transparent;
+        
+    }
+
+    .info{
+        padding: 0px 20px;
+    }
+
+    .container-form{
+        width: 235px;
+    }
+
+    #city-search-id {
+        width: 210px;
+     }
+
+
+    .button-search-right {
+        display :none;
+    }
+
+    .mini-button-container{
+        display: flex;
+        border-radius: 0px 15px 15px 0px;
+        border-top: 1px solid var(--main-bg-color);
+        border-bottom: 1px solid var(--main-bg-color);
+    }
+        
+    .button-search-right-mini {
+        display: flex; /* only for mobile users */
+    }
+
+
+    .filters {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .filter-buttons{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .button-filter{
+        width: 200.5px;
+    }
+
 
     .hebergements-and-populaires {
         flex-direction: column-reverse;
