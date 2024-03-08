@@ -128,6 +128,8 @@ nav a{
     gap: 8px;
 }
 
+/* search-bar begin */
+
 .search-bar {
     display: flex;
     height: 49px;
@@ -208,8 +210,10 @@ nav a{
     border-radius: 15px;
     background-color: var(--blue-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    display:none; /* only for mobile users */
+    display: none; /* only for mobile users */
 }
+
+/*search-bar end */
 
 .filters {
     display: flex;
@@ -220,7 +224,8 @@ nav a{
 
 .filter-buttons{
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
+    
     gap: 15px;  
 }
 
@@ -237,7 +242,8 @@ nav a{
 /* text */
   color:black;
   font-size: 18px;
-  font-weight:700;    
+  font-weight:700;
+  text-align: left;    
 }
 
 .button-filter i {
@@ -319,7 +325,7 @@ nav a{
     flex-direction: column;
     justify-content: space-between;
     width: 65%; /*OK pour avoir la gap de 40 px entre les deux sections*/
- /*   gap: 30px; 6324*/
+    row-gap: 30px;
 }
 
 .hebergements-cards {
@@ -335,7 +341,7 @@ nav a{
     display: flex;
     flex-direction: column;
     width: 29%;
-    height: 192.25px;
+    height: 196.25px
 }
 
 .hebergements-cards img {
@@ -373,15 +379,19 @@ nav a{
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    
 }
 
 .populaires-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .populaires-cards {
+    display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 
@@ -417,6 +427,10 @@ nav a{
 }
 
 .activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
     width: 100%;
     padding: 30px;
     box-sizing: border-box;   
@@ -526,6 +540,14 @@ footer {
 }
 
 /* Small devices (phones, less than 768px) */
+@media screen and (min-width: 768px) and (max-width: 836px) {
+    .button-filter{
+        font-size: 14px;        
+    }
+}
+
+
+/* Small devices (phones, less than 768px) */
 @media screen and (min-width: 320px) and (max-width: 767.98px) {
 
     .body-container {
@@ -600,8 +622,9 @@ footer {
     }
 
     .button-filter{
-        width: 200.5px;
+        width: 162.5px;
         font-size: 14px;
+        
     }
 
     .hebergements-and-populaires {
@@ -664,8 +687,6 @@ footer {
     .activity-card img{
         height: 141px;
     }
-
-
 
     footer {
         flex-direction: column;
