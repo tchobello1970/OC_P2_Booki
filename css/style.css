@@ -5,7 +5,6 @@
 * {
     font-family: 'Raleway', sans-serif;
     margin:0;
-    
 }
 
 :root {
@@ -71,9 +70,9 @@ body {
 .body-container {
     width: 100%;
     max-width: 1440px; /* nothing happens if width is superior*/
-    padding: 0 50px; 
-    box-sizing: border-box; /* borders and paddings are included in the box */   
-}
+    padding: 0 50px;
+    box-sizing: border-box; /* borders and paddings are included in the box */      
+ }
 
 main {
     width: 100%;
@@ -211,8 +210,8 @@ nav a{
 .button-search-right {
  /* flex */
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally in row flex*/
+    align-items: center; /* Center vertically in row flex*/
  /* button */
     cursor: pointer;
     width: 132px;
@@ -252,19 +251,19 @@ nav a{
 
 .button-filter {
   /* button */
-  cursor: pointer;
-  height: 50px;
-  margin: 0; 
-  border: 2px solid var(--light-grey-color);
-  border-radius: 25px;
-  background-color: transparent;
-  padding: 4px 19px;
+    cursor: pointer;
+    height: 50px;
+    margin: 0; 
+    border: 2px solid var(--light-grey-color);
+    border-radius: 25px;
+    background-color: transparent;
+    padding: 4px 19px;
 
 /* text */
-  color:black;
-  font-size: 18px;
-  font-weight:700;
-  text-align: left;    
+    color:black;
+    font-size: 18px;
+    font-weight:700;
+    text-align: left;    
 }
 
 .button-filter i {
@@ -348,6 +347,7 @@ nav a{
     display: flex;
     justify-content: space-between;
     row-gap: 50px;
+    column-gap: 40px;
 }
 
 .hebergements-and-populaires section {
@@ -360,13 +360,14 @@ nav a{
 /****** Hebergements *****/
 /*  
 /*   flex made of title, cards container and footer
+/*   hebergement width is 2x populaire width
 /*
 **************************/
 .hebergements {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 65%; /*OK to get the 40 px gap between both sections*/
+    flex-grow: 2;
     row-gap: 30px;
 }
 
@@ -422,9 +423,6 @@ nav a{
 
 
 /****** Populaires ******/
-.populaires {
-    width: 32%;
-}
 
 .populaires-title {
     display: flex;
@@ -626,16 +624,11 @@ footer {
         padding: 0;
     }
 
-
     header{
         flex-direction: column;
         height: 115px;
         align-items: center;
     }
-  
-    .booki {
-        padding: 30px 50px;
-    } 
     
     /******* nav ************/
     /*
@@ -691,19 +684,19 @@ footer {
     }
 
     .button-search-right-mini {
-        /* flex */
-           justify-content: center;
-           align-items: center;
-           border-radius: 0px 15px 15px 0px;
-        /* button */   
-           cursor: pointer;
-           width: 49px;
-           border: 1px var(--blue-color);
-           border-radius: 15px;
-           background-color: var(--blue-color);
-           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-           display: flex; /* only for mobile users */
-       }
+    /* flex */
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 15px 15px 0px;
+    /* button */   
+        cursor: pointer;
+        width: 49px;
+        border: 1px var(--blue-color);
+        border-radius: 15px;
+        background-color: var(--blue-color);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        display: flex; /* only for mobile users */
+    }
         
 /*  filters have same width and flex is wrap */
 
