@@ -126,8 +126,6 @@ nav a{
 /* column flex with headline, search, filters and info-bar
 /*
 **********************************************************/
-
-
 .info{
     display: flex; 
     flex-direction: column;
@@ -199,14 +197,14 @@ nav a{
     opacity: 1; /* mozilla compatibility */
 }
 
+
+
 /******button search *************************************/
 /*
 /*  flex button with text centered 
 /*  flex button with icon centered and not displayed
 /*
 **********************************************************/
-
-
 .button-search-right {
  /* flex */
     display: flex;
@@ -225,7 +223,7 @@ nav a{
     font-weight:700;
     /*display:none;  mobile users */
  }
-
+ 
  .mini-button-container{
     display:none;
  }
@@ -651,7 +649,6 @@ footer {
     
     .nav-title:hover {
         border-bottom: 2px solid var(--blue-color);
-        border-top: 0px solid transparent;
     }
 
     .info{
@@ -730,8 +727,6 @@ footer {
     }
 
     .populaires-cards {
-        display: flex;
-        flex-direction: column;
         justify-content: space-between;
         gap: 15px;
     }
@@ -760,6 +755,7 @@ footer {
         width: 100%;
     }
 
+    
 
     .activities-cards {
         flex-direction: column;
